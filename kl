@@ -1,0 +1,38 @@
+GRANT CREATE SESSION TO jatin IDENTIFIED BY Qwerty123;
+BEGIN
+  DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+    host => '34.131.7.87/32',
+    ace => xs$ace_type(privilege_list => xs$name_list('connect'),
+                        principal_name => '5FUVHONEJJORHVBE',
+                        principal_type => xs_acl.ptype_db));
+  DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+    host => '34.131.15.52/32',
+    ace => xs$ace_type(privilege_list => xs$name_list('connect'),
+                        principal_name => '5FUVHONEJJORHVBE',
+                        principal_type => xs_acl.ptype_db));
+  DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+    host => '34.131.113.219/32',
+    ace => xs$ace_type(privilege_list => xs$name_list('connect'),
+                        principal_name => '5FUVHONEJJORHVBE',
+                        principal_type => xs_acl.ptype_db));
+  DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+    host => '34.131.118.185/32',
+    ace => xs$ace_type(privilege_list => xs$name_list('connect'),
+                        principal_name => '5FUVHONEJJORHVBE',
+                        principal_type => xs_acl.ptype_db));
+  DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+    host => '34.131.191.56/32',
+    ace => xs$ace_type(privilege_list => xs$name_list('connect'),
+                        principal_name => '5FUVHONEJJORHVBE',
+                        principal_type => xs_acl.ptype_db));
+  DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+    host => '34.131.224.89/32',
+    ace => xs$ace_type(privilege_list => xs$name_list('connect'),
+                        principal_name => '5FUVHONEJJORHVBE',
+                        principal_type => xs_acl.ptype_db));
+  DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+    host => '34.131.227.64/30',
+    ace => xs$ace_type(privilege_list => xs$name_list('connect'),
+                        principal_name => '5FUVHONEJJORHVBE',
+                        principal_type => xs_acl.ptype_db));
+END;

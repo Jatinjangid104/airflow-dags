@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: airflow-local-dags-folder
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteMany
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: airflow-local-dags-folder
+    namespace: airflow
+  hostPath:
+    path: "/mnt/c/Users/JatinJangid/.vscode/airflow/data/dags"
