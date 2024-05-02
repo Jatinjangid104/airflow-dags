@@ -65,10 +65,10 @@ containerLifecycleHooks: {}
 airflowHome: /opt/airflow
 
 # Default airflow repository -- overridden by all the specific images below
-defaultAirflowRepository: airflow-custom
+defaultAirflowRepository: apache/airflow
 
 # Default airflow tag to deploy
-defaultAirflowTag: "1.0.0"
+defaultAirflowTag: "2.8.3"
 
 # Default airflow digest. If specified, it takes precedence over tag
 defaultAirflowDigest: ~
@@ -2452,12 +2452,12 @@ dags:
     ## optional subpath for dag volume mount
     subPath: ~
   gitSync:
-    enabled: true 
+    enabled: true
 
     # git repo clone url
     # ssh example: git@github.com:apache/airflow.git
     # https example: https://github.com/apache/airflow.git
-    repo: ssh://git@github.com:Jatinjangid104/airflow-dags.git
+    repo: https://github.com/Jatinjangid104/airflow-dags.git
     branch: main
     rev: HEAD
     # The git revision (branch, tag, or hash) to check out, v4 only
@@ -2467,7 +2467,7 @@ dags:
     maxFailures: 0
     # subpath within the repo where dags are located
     # should be "" if dags are at repo root
-    subPath: "data/dags/"
+    subPath: "data/dags"
     # if your repo needs a user name password
     # you can load them to a k8s secret like the one below
     #   ---
