@@ -4,7 +4,7 @@ from datetime import datetime
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.http.sensors.http import HttpSensor
 from airflow.providers.http.operators.http import SimpleHttpOperator
-from airflow.providers.python import PythonOperator
+from airflow.operators.python import PythonOperator
 
 import json
 from pandas import json_normalize # used in _process_user
