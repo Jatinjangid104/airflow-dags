@@ -22,6 +22,9 @@ def _process_user(ti):
         'email': user['email'] })
     processed_user.to_csv('/tmp/processed_user.csv', index=None, header=False)  
     
+ 
+from airflow.providers.postgres.operators.postgres import PostgresOperator
+ 
 with DAG(
     dag_id="user_processing",
     start_date=datetime(2023, 1, 1),
@@ -65,4 +68,4 @@ with DAG(
         
         )
     
-    extract_user >> process_user
+extract_user >> process_user
