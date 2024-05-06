@@ -62,7 +62,7 @@ with DAG(
         log_response=True
     )
     
-    process_user = PostgresOperator(
+    process_user = PythonOperator(
         task_id = 'process_user',
         python_callable=_process_user,
         
